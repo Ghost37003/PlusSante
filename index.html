@@ -12,6 +12,7 @@
         <a class="logo">🩺 Plus<span>Santé</span></a>
         
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        
         <label for="menu-toggle" class="hamburger">
             <span></span>
             <span></span>
@@ -58,18 +59,9 @@
         <footer>
             <p>&copy; 2026 PlusSanté - Clinique Médicale Agréée.</p>
             <div class="footer-links">
-                <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    Mentions légales
-                </a>
-                <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-                    Réseaux sociaux
-                </a>
-                <a href="#rendezvous">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    Contact
-                </a>
+                <a href="#">Mentions légales</a>
+                <a href="#">Réseaux sociaux</a>
+                <a href="#rendezvous">Contact</a>
             </div>
         </footer>
     </section>
@@ -77,26 +69,22 @@
     <section id="apropos" class="page">
         <div class="container">
             <h2 class="section-title">À Propos de PlusSanté</h2>
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
-                <p style="font-size: 1.1rem;">Cette page présente l'équipe médicale et les valeurs de la consultation, et fournit des informations sur l'expérience et les spécialisations des médecins.</p>
-            </div>
-
             <div class="mission-values">
                 <div class="card">
                     <h3>Notre Mission</h3>
                     <ul>
                         <li>Démocratiser l'accès aux spécialistes.</li>
-                        <li>Réduire les délais d'attente pour les rendez-vous.</li>
-                        <li>Accompagner le patient dans son parcours de soin.</li>
+                        <li>Réduire les délais d'attente.</li>
+                        <li>Accompagner le parcours de soin.</li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3>Nos Valeurs</h3>
-                    <p>Éthique médicale, Empathie, et Innovation constante sont les piliers de notre pratique quotidienne au service de votre bien-être.</p>
+                    <p>Éthique médicale, Empathie, et Innovation constante sont les piliers de notre pratique quotidienne.</p>
                 </div>
             </div>
 
-            <h3 style="font-size: 1.8rem; margin-bottom: 30px; text-align: center; color: var(--primary);">Notre Équipe Médicale</h3>
+            <h3 class="section-title" style="font-size: 1.8rem;">Notre Équipe Médicale</h3>
             <div class="team-grid">
                 <div class="doctor-card">
                     <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=300&q=80" alt="Dr Diallo">
@@ -111,38 +99,8 @@
                 <div class="doctor-card">
                     <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=300&q=80" alt="Dr Chen">
                     <h4>Dr. Sophie Chen</h4>
-                    <p>Médecine Interne & Urgences</p>
+                    <p>Médecine Interne</p>
                 </div>
-            </div>
-
-            <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Spécialisations & Disponibilités</h3>
-            <div class="table-container">
-                <table class="specialty-table">
-                    <thead>
-                        <tr>
-                            <th>Domaine de Spécialité</th>
-                            <th>Type de Suivi</th>
-                            <th>Disponibilité</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Médecine Générale</td>
-                            <td>Consultation de routine & Prévention</td>
-                            <td>Lundi au Samedi</td>
-                        </tr>
-                        <tr>
-                            <td>Cardiologie</td>
-                            <td>Diagnostic & Hypertension</td>
-                            <td>Sur RDV uniquement</td>
-                        </tr>
-                        <tr>
-                            <td>Pédiatrie</td>
-                            <td>Suivi de croissance & Vaccins</td>
-                            <td>Urgences acceptées</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </section>
@@ -153,26 +111,16 @@
             <div class="services-layout">
                 <article class="service-box">
                     <h3>🩺 Consultation Générale</h3>
-                    <p>Un bilan complet de votre état de santé, traitement des pathologies courantes et orientation vers des spécialistes si nécessaire.</p>
+                    <p>Un bilan complet de votre état de santé et orientation vers des spécialistes.</p>
                 </article>
-
                 <article class="service-box">
                     <h3>📈 Suivi de Santé</h3>
-                    <p>Gestion personnalisée pour les patients souffrant de maladies chroniques (diabète, hypertension). Monitoring et ajustement thérapeutique.</p>
+                    <p>Gestion personnalisée pour les maladies chroniques et monitoring.</p>
                 </article>
-
                 <article class="service-box">
                     <h3>🔬 Dépistage & Analyses</h3>
-                    <p>Accès facilité à des protocoles de dépistage (bilans sanguins, tests diagnostiques) avec interprétation détaillée de vos résultats.</p>
+                    <p>Accès facilité à des protocoles de dépistage avec interprétation détaillée.</p>
                 </article>
-
-                <article class="service-box">
-                    <h3>🤱 Accompagnement Familial</h3>
-                    <p>Conseils en nutrition, suivi de grossesse et guidance parentale pour assurer le bien-être de toute la famille au quotidien.</p>
-                </article>
-            </div>
-            <div style="text-align: center; margin-top: 60px;">
-                <a href="#rendezvous" class="btn-send" style="text-decoration: none; display: inline-block; width: auto; font-size: 1rem;">Prendre rendez-vous pour un service</a>
             </div>
         </div>
     </section>
@@ -181,29 +129,18 @@
         <div class="container">
             <h2 class="section-title">Prendre Rendez-vous</h2>
             <div class="booking-wrapper">
-                
                 <div class="form-card">
-                    <form action="#">
+                    <form>
                         <div class="field-group">
-                            <label>Nom Complet du Patient</label>
+                            <label>Nom Complet</label>
                             <input type="text" placeholder="Ex: Jean-Luc Dupont" required>
                         </div>
                         <div class="field-group">
-                            <label>Adresse Email</label>
+                            <label>Email</label>
                             <input type="email" placeholder="votre@email.com" required>
                         </div>
-                        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                            <div class="field-group" style="flex: 1; min-width: 150px;">
-                                <label>Date Souhaitée</label>
-                                <input type="date" required>
-                            </div>
-                            <div class="field-group" style="flex: 1; min-width: 150px;">
-                                <label>Heure Préférée</label>
-                                <input type="time" required>
-                            </div>
-                        </div>
                         <div class="field-group">
-                            <label>Service Sélectionné</label>
+                            <label>Service</label>
                             <select>
                                 <option>Consultation Générale</option>
                                 <option>Suivi de Santé</option>
@@ -213,20 +150,10 @@
                         <button type="submit" class="btn-send">Envoyer la demande</button>
                     </form>
                 </div>
-
                 <div class="info-card">
-                    <h3>Informations Importantes</h3>
-                    <p style="margin-bottom: 20px; line-height: 1.6;">
-                        Retrouvez ci-dessous les informations sur les méthodes d'annulation et de modification des rendez-vous :
-                    </p>
-                    <p style="margin: 20px 0; font-size: 0.95rem; line-height: 1.6; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 10px;">
-                        <strong>Annulation / Modification :</strong> Vous pouvez modifier ou annuler votre rendez-vous jusqu'à 24 heures avant l'heure prévue via le lien sécurisé reçu par email lors de votre confirmation.
-                    </p>
-                    <p style="font-size: 0.95rem; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 10px;">
-                        <strong>Préparation :</strong> Veuillez vous munir de vos derniers examens médicaux, de votre carte vitale et d'une pièce d'identité lors de votre première consultation.
-                    </p>
+                    <h3>Informations</h3>
+                    <p>Veuillez vous munir de vos derniers examens médicaux lors de votre visite.</p>
                 </div>
-
             </div>
         </div>
     </section>

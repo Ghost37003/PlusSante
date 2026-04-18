@@ -95,6 +95,7 @@ header {
 }
 
 /* CORRECTION : Masquer l'accueil si une AUTRE page est ciblée */
+/* On utilise :has pour détecter si une page (autre que l'accueil) est active */
 body:has(.page:target:not(#accueil)) #accueil {
     opacity: 0;
     visibility: hidden;

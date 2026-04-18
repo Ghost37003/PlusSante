@@ -55,6 +55,7 @@ header {
     cursor: pointer;
     z-index: 1100;
     padding: 10px;
+    margin-to: 10px;
 }
 
 .hamburger span {

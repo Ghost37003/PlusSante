@@ -2,17 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --primary: #1E3A8A;       /* Bleu profond et professionnel */
-    --primary-light: #3B82F6; /* Bleu vif pour les accents */
-    --secondary: #0EA5E9;     /* Bleu clair d'innovation */
-    --accent: #10B981;        /* Vert émeraude (Santé) */
-    --bg-color: #F8FAFC;      /* Gris très clair (fond) */
-    --surface: #FFFFFF;       /* Blanc pur (cartes) */
+    --primary: #1E3A8A;
+    --primary-light: #3B82F6;
+    --secondary: #0EA5E9;
+    --accent: #10B981;
+    --bg-color: #F8FAFC;
+    --surface: #FFFFFF;
     --text-dark: #0F172A;
     --text-muted: #64748B;
     --border-color: #E2E8F0;
     
-    /* Ombres modernes (Soft UI) */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.02);
@@ -35,14 +34,13 @@ html, body {
     background-color: var(--bg-color);
     color: var(--text-dark);
     scroll-behavior: smooth;
-    overflow: hidden; /* Nécessaire pour le système d'onglets CSS */
+    overflow: hidden;
 }
 
-/* --- TYPOGRAPHIE --- */
 h1, h2, h3, h4 { color: var(--text-dark); font-weight: 700; line-height: 1.2; }
 p { color: var(--text-muted); line-height: 1.6; }
 
-/* --- NAVIGATION (Glassmorphism) --- */
+/* --- NAVIGATION --- */
 header {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
@@ -69,8 +67,27 @@ header {
     align-items: center;
     gap: 8px;
     letter-spacing: -0.5px;
+    z-index: 1001; /* Pour rester au-dessus du menu mobile */
 }
 .logo span { color: var(--secondary); }
+
+/* --- STYLE DU HAMBURGER (Caché sur desktop) --- */
+.menu-toggle { display: none; }
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+    flex-direction: column;
+    gap: 6px;
+}
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: var(--transition);
+}
 
 .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
 .nav-links a { 
@@ -97,7 +114,7 @@ header {
 /* --- STRUCTURE DE PAGE (SPA CSS) --- */
 .page {
     position: absolute;
-    top: 85px; /* Sous le header */
+    top: 85px;
     left: 0;
     width: 100%;
     height: calc(100% - 85px);
@@ -110,7 +127,6 @@ header {
     padding-bottom: 60px;
 }
 
-/* Gestion de l'affichage (le dernier ciblé passe au premier plan) */
 #accueil { opacity: 1; visibility: visible; z-index: 1; transform: translateY(0); transition-delay: 0s; }
 .page:target { 
     opacity: 1; 
@@ -177,7 +193,6 @@ header {
 }
 .doctor-card h4 { font-size: 1.25rem; color: var(--primary); margin-bottom: 5px; }
 
-/* Tableau */
 .table-container { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); background: var(--surface); }
 .specialty-table { width: 100%; border-collapse: collapse; text-align: left; }
 .specialty-table th, .specialty-table td { padding: 20px; border-bottom: 1px solid var(--border-color); }
@@ -240,11 +255,45 @@ footer p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
 }
 .footer-links a:hover { color: var(--primary); }
 
-/* --- RESPONSIVE --- */
+/* --- RESPONSIVE DESIGN (Modifié pour le Hamburger) --- */
 @media (max-width: 900px) {
+    /* Affichage du bouton hamburger */
+    .hamburger { display: flex; }
+
+    /* Masquage et style du menu mobile */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Caché à droite */
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--surface);
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        transition: var(--transition);
+        z-index: 1000;
+    }
+
+    /* Quand la checkbox est cochée, on fait apparaître le menu */
+    .menu-toggle:checked ~ nav .nav-links {
+        right: 0;
+    }
+
+    /* Animation du bouton hamburger quand ouvert */
+    .menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .menu-toggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
+    .menu-toggle:checked ~ .hamburger span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+    /* Fermer le menu lors du clic sur un lien (via CSS target logic) */
+    .nav-links li a { font-size: 1.2rem; width: 100%; text-align: center; }
+
+    /* Reste du responsive */
     .hero, .mission-values { flex-direction: column; text-align: center; }
     .hero-text h1 { font-size: 2.5rem; }
-    .nav-links { display: none; }
+    .hero-image { order: -1; } /* Image au dessus du texte sur mobile */
     .features-strip { grid-template-columns: 1fr; }
     .booking-wrapper { flex-direction: column; }
     footer { flex-direction: column; gap: 20px; text-align: center; }

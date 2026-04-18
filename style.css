@@ -43,39 +43,63 @@ header {
 }
 .logo span { color: var(--secondary); }
 
-/* CACHER LA CHECKBOX TOTALEMENT (Fix iPhone) */
-.menu-checkbox {
-    display: none !important;
-    visibility: hidden;
-    position: absolute;
-    left: -9999px;
-}
+.menu-checkbox { display: none !important; visibility: hidden; position: absolute; left: -9999px; }
 
 .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
 .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 0.9rem; }
 .btn-nav-rdv { background: var(--primary); color: white !important; padding: 10px 20px; border-radius: 50px; }
 
-/* BOUTON HAMBURGER (Caché sur PC) */
 .hamburger {
     display: none;
     cursor: pointer;
     flex-direction: column;
     gap: 6px;
     z-index: 1100;
+    margin-top: 4px; /* Alignement parfait avec le texte du logo */
 }
 .hamburger span {
     display: block; width: 25px; height: 3px; background: var(--primary);
     border-radius: 3px; transition: var(--transition);
 }
 
-/* --- STRUCTURE SPA --- */
+/* --- STRUCTURE SPA (LOGIQUE DE NAVIGATION CORRIGÉE) --- */
 .page {
-    position: absolute; top: 85px; left: 0; width: 100%; height: calc(100% - 85px);
-    overflow-y: auto; opacity: 0; visibility: hidden; transform: translateY(10px);
-    transition: var(--transition); padding-bottom: 40px;
+    position: absolute; 
+    top: 85px; 
+    left: 0; 
+    width: 100%; 
+    height: calc(100% - 85px);
+    overflow-y: auto; 
+    opacity: 0; 
+    visibility: hidden; 
+    transform: translateY(10px);
+    transition: var(--transition); 
+    padding-bottom: 40px;
+    background-color: var(--bg-color); /* Fond opaque pour masquer les pages dessous */
 }
-#accueil { opacity: 1; visibility: visible; transform: translateY(0); }
-.page:target { opacity: 1; visibility: visible; transform: translateY(0); z-index: 10; }
+
+/* Page Accueil visible par défaut */
+#accueil { 
+    opacity: 1; 
+    visibility: visible; 
+    transform: translateY(0); 
+    z-index: 1;
+}
+
+/* Affichage de la page ciblée via l'URL */
+.page:target { 
+    opacity: 1; 
+    visibility: visible; 
+    transform: translateY(0); 
+    z-index: 10; 
+}
+
+/* CORRECTION : Masquer l'accueil si une AUTRE page est ciblée */
+body:has(.page:target:not(#accueil)) #accueil {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
 
 .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
 .section-title { font-size: 2rem; text-align: center; margin-bottom: 40px; color: var(--primary); }
@@ -112,7 +136,6 @@ footer { text-align: center; padding: 40px; border-top: 1px solid var(--border-c
 /* --- RESPONSIVE MOBILE (900px) --- */
 @media (max-width: 900px) {
     header { justify-content: space-between; }
-    
     .hamburger { display: flex; }
 
     .nav-links {
@@ -121,10 +144,8 @@ footer { text-align: center; padding: 40px; border-top: 1px solid var(--border-c
         transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* Ouverture du menu */
     #menu-toggle:checked ~ nav .nav-links { right: 0; }
 
-    /* Animation du Hamburger */
     #menu-toggle:checked + .hamburger span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
     #menu-toggle:checked + .hamburger span:nth-child(2) { opacity: 0; }
     #menu-toggle:checked + .hamburger span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }

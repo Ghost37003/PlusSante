@@ -2,14 +2,14 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>PlusSanté | Consultation Médicale</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PlusSanté | Plateforme de Consultation Médicale</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <a class="logo" href="#accueil">Plus<span>Santé</span></a>
+        <a class="logo" href="#accueil">🩺 Plus<span>Santé</span></a>
         
         <input type="checkbox" id="menu-toggle" class="menu-checkbox">
         
@@ -24,7 +24,7 @@
                 <li><a href="#accueil"><label for="menu-toggle">Accueil</label></a></li>
                 <li><a href="#apropos"><label for="menu-toggle">À Propos</label></a></li>
                 <li><a href="#services"><label for="menu-toggle">Services</label></a></li>
-                <li><a href="#rendezvous" class="btn-rdv"><label for="menu-toggle">Prendre RDV</label></a></li>
+                <li><a href="#rendezvous" class="btn-nav-rdv"><label for="menu-toggle">Prendre Rendez-vous</label></a></li>
             </ul>
         </nav>
     </header>
@@ -33,26 +33,68 @@
         <div class="container">
             <div class="hero">
                 <div class="hero-text">
-                    <h1>Votre santé, notre priorité.</h1>
-                    <p>Accédez facilement à des informations médicales et prenez vos rendez-vous en ligne en toute sécurité.</p>
-                    <a href="#rendezvous" class="btn-main">Prendre un rendez-vous</a>
+                    <h1>Votre santé mérite l'excellence digitale.</h1>
+                    <p>Bienvenue sur PlusSanté. Notre plateforme a pour objectif de fournir aux utilisateurs un accès facile à des informations médicales, la possibilité de prendre rendez-vous en ligne et des ressources utiles concernant la santé.</p>
+                    
+                    <div class="features-strip">
+                        <div class="feature-item">
+                            <strong>🕒 Disponibilité 24/7</strong>
+                            <p>Accès permanent à nos ressources.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>👨‍⚕️ Experts Agréés</strong>
+                            <p>Une équipe médicale qualifiée.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>🔐 Données Sécurisées</strong>
+                            <p>Confidentialité totale garantie.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://i.pinimg.com/1200x/1e/f7/6a/1ef76af3851091f0546d33e7002abeeb.jpg" alt="Consultation Médicale Moderne">
                 </div>
             </div>
         </div>
+        <footer>
+            <p>&copy; 2026 PlusSanté - Clinique Médicale Agréée.</p>
+            <div class="footer-links">
+                <a href="#">Mentions légales</a>
+                <a href="#">Réseaux sociaux</a>
+                <a href="#rendezvous">Contact</a>
+            </div>
+        </footer>
     </section>
 
     <section id="apropos" class="page">
         <div class="container">
-            <h2>À Propos</h2>
-            <p>PlusSanté démocratise l'accès aux soins grâce à une équipe d'experts dévoués.</p>
-            <div class="grid">
+            <h2 class="section-title">À Propos de PlusSanté</h2>
+            <div class="mission-values">
                 <div class="card">
                     <h3>Notre Mission</h3>
-                    <p>Réduire les délais d'attente et accompagner chaque patient.</p>
+                    <ul>
+                        <li>Démocratiser l'accès aux spécialistes.</li>
+                        <li>Réduire les délais d'attente.</li>
+                        <li>Accompagner le patient.</li>
+                    </ul>
                 </div>
                 <div class="card">
                     <h3>Nos Valeurs</h3>
-                    <p>Éthique, Empathie et Innovation digitale.</p>
+                    <p>Éthique, Empathie et Innovation sont au cœur de notre pratique.</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; color: var(--primary); margin-bottom: 30px;">Notre Équipe Médicale</h3>
+            <div class="team-grid">
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=300&q=80" alt="Dr Diallo">
+                    <h4>Dr. Amina Diallo</h4>
+                    <p>Cardiologie</p>
+                </div>
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=300&q=80" alt="Dr Lefebvre">
+                    <h4>Dr. Marc Lefebvre</h4>
+                    <p>Pédiatrie</p>
                 </div>
             </div>
         </div>
@@ -60,30 +102,188 @@
 
     <section id="services" class="page">
         <div class="container">
-            <h2>Nos Services</h2>
-            <div class="grid">
-                <div class="service-item">🩺 Consultation Générale</div>
-                <div class="service-item">📈 Suivi de Santé</div>
-                <div class="service-item">🔬 Dépistage</div>
+            <h2 class="section-title">Nos Services</h2>
+            <div class="services-layout">
+                <article class="service-box">
+                    <h3>🩺 Consultation Générale</h3>
+                    <p>Bilan complet et traitement des pathologies courantes.</p>
+                </article>
+                <article class="service-box">
+                    <h3>📈 Suivi de Santé</h3>
+                    <p>Gestion personnalisée des maladies chroniques.</p>
+                </article>
+                <article class="service-box">
+                    <h3>🔬 Dépistage</h3>
+                    <p>Analyses et interprétation des résultats.</p>
+                </article>
             </div>
         </div>
     </section>
 
     <section id="rendezvous" class="page">
         <div class="container">
-            <h2>Rendez-vous</h2>
-            <form class="form-rdv">
-                <input type="text" placeholder="Nom complet" required>
-                <input type="email" placeholder="Email" required>
-                <input type="date" required>
-                <button type="submit" class="btn-main">Envoyer</button>
-            </form>
+            <h2 class="section-title">Prendre Rendez-vous</h2>
+            <div class="booking-wrapper">
+                <div class="form-card">
+                    <form action="#">
+                        <div class="field-group">
+                            <label>Nom Complet</label>
+                            <input type="text" placeholder="Ex: Jean Dupont" required>
+                        </div>
+                        <div class="field-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="votre@email.com" required>
+                        </div>
+                        <button type="submit" class="btn-send">Envoyer la demande</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 PlusSanté. Tous droits réservés.</p>
-    </footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PlusSanté | Plateforme de Consultation Médicale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a class="logo" href="#accueil">🩺 Plus<span>Santé</span></a>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#accueil"><label for="menu-toggle">Accueil</label></a></li>
+                <li><a href="#apropos"><label for="menu-toggle">À Propos</label></a></li>
+                <li><a href="#services"><label for="menu-toggle">Services</label></a></li>
+                <li><a href="#rendezvous" class="btn-nav-rdv"><label for="menu-toggle">Prendre Rendez-vous</label></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil" class="page">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-text">
+                    <h1>Votre santé mérite l'excellence digitale.</h1>
+                    <p>Bienvenue sur PlusSanté. Notre plateforme a pour objectif de fournir aux utilisateurs un accès facile à des informations médicales, la possibilité de prendre rendez-vous en ligne et des ressources utiles concernant la santé.</p>
+                    
+                    <div class="features-strip">
+                        <div class="feature-item">
+                            <strong>🕒 Disponibilité 24/7</strong>
+                            <p>Accès permanent à nos ressources.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>👨‍⚕️ Experts Agréés</strong>
+                            <p>Une équipe médicale qualifiée.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>🔐 Données Sécurisées</strong>
+                            <p>Confidentialité totale garantie.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://i.pinimg.com/1200x/1e/f7/6a/1ef76af3851091f0546d33e7002abeeb.jpg" alt="Consultation Médicale Moderne">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2026 PlusSanté - Clinique Médicale Agréée.</p>
+            <div class="footer-links">
+                <a href="#">Mentions légales</a>
+                <a href="#">Réseaux sociaux</a>
+                <a href="#rendezvous">Contact</a>
+            </div>
+        </footer>
+    </section>
+
+    <section id="apropos" class="page">
+        <div class="container">
+            <h2 class="section-title">À Propos de PlusSanté</h2>
+            <div class="mission-values">
+                <div class="card">
+                    <h3>Notre Mission</h3>
+                    <ul>
+                        <li>Démocratiser l'accès aux spécialistes.</li>
+                        <li>Réduire les délais d'attente.</li>
+                        <li>Accompagner le patient.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Nos Valeurs</h3>
+                    <p>Éthique, Empathie et Innovation sont au cœur de notre pratique.</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; color: var(--primary); margin-bottom: 30px;">Notre Équipe Médicale</h3>
+            <div class="team-grid">
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=300&q=80" alt="Dr Diallo">
+                    <h4>Dr. Amina Diallo</h4>
+                    <p>Cardiologie</p>
+                </div>
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=300&q=80" alt="Dr Lefebvre">
+                    <h4>Dr. Marc Lefebvre</h4>
+                    <p>Pédiatrie</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="page">
+        <div class="container">
+            <h2 class="section-title">Nos Services</h2>
+            <div class="services-layout">
+                <article class="service-box">
+                    <h3>🩺 Consultation Générale</h3>
+                    <p>Bilan complet et traitement des pathologies courantes.</p>
+                </article>
+                <article class="service-box">
+                    <h3>📈 Suivi de Santé</h3>
+                    <p>Gestion personnalisée des maladies chroniques.</p>
+                </article>
+                <article class="service-box">
+                    <h3>🔬 Dépistage</h3>
+                    <p>Analyses et interprétation des résultats.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="rendezvous" class="page">
+        <div class="container">
+            <h2 class="section-title">Prendre Rendez-vous</h2>
+            <div class="booking-wrapper">
+                <div class="form-card">
+                    <form action="#">
+                        <div class="field-group">
+                            <label>Nom Complet</label>
+                            <input type="text" placeholder="Ex: Jean Dupont" required>
+                        </div>
+                        <div class="field-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="votre@email.com" required>
+                        </div>
+                        <button type="submit" class="btn-send">Envoyer la demande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>

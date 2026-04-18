@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlusSanté | Plateforme de Consultation Médicale</title>
-    <!-- Liaison vers le fichier CSS externe -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <a class="logo">🩺 Plus<span>Santé</span></a>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <nav>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
@@ -21,7 +28,6 @@
         </nav>
     </header>
 
-    <!-- PAGE 1 : ACCUEIL -->
     <section id="accueil" class="page">
         <div class="container">
             <div class="hero">
@@ -68,7 +74,6 @@
         </footer>
     </section>
 
-    <!-- PAGE 2 : À PROPOS -->
     <section id="apropos" class="page">
         <div class="container">
             <h2 class="section-title">À Propos de PlusSanté</h2>
@@ -142,7 +147,6 @@
         </div>
     </section>
 
-    <!-- PAGE 3 : SERVICES -->
     <section id="services" class="page">
         <div class="container">
             <h2 class="section-title">Nos Services</h2>
@@ -173,7 +177,6 @@
         </div>
     </section>
 
-    <!-- PAGE 4 : RENDEZ-VOUS -->
     <section id="rendezvous" class="page">
         <div class="container">
             <h2 class="section-title">Prendre Rendez-vous</h2>

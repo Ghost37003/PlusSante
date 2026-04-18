@@ -43,7 +43,7 @@ header {
 }
 .logo span { color: var(--secondary); }
 
-/* CACHER LA CHECKBOX TOTALEMENT (Fix iPhone) */
+/* CACHER LA CHECKBOX TOTALEMENT */
 .menu-checkbox {
     display: none !important;
     visibility: hidden;
@@ -53,21 +53,16 @@ header {
 
 .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
 .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 0.9rem; }
-
-/* Assurer que le label prend toute la place pour le clic */
-.nav-links a label { cursor: pointer; display: block; width: 100%; height: 100%; }
-
 .btn-nav-rdv { background: var(--primary); color: white !important; padding: 10px 20px; border-radius: 50px; }
-.btn-nav-rdv label { color: white !important; }
 
-/* BOUTON HAMBURGER (Caché sur PC) */
+/* BOUTON HAMBURGER */
 .hamburger {
     display: none;
     cursor: pointer;
     flex-direction: column;
     gap: 6px;
     z-index: 1100;
-    transform: translateY(4px); /* MODIFICATION : Descend l'icône pour l'aligner avec le logo */
+    margin-top: 4px; /* MODIFICATION : Aligne visuellement le bouton avec le logo */
 }
 .hamburger span {
     display: block; width: 25px; height: 3px; background: var(--primary);
@@ -126,15 +121,9 @@ footer { text-align: center; padding: 40px; border-top: 1px solid var(--border-c
         background: white; flex-direction: column; justify-content: center;
         transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
-    /* MODIFICATION : Amélioration de l'espacement pour le clic sur mobile */
-    .nav-links li { width: 100%; text-align: center; }
-    .nav-links a { display: block; padding: 20px 0; width: 100%; }
 
-    /* Ouverture du menu */
     #menu-toggle:checked ~ nav .nav-links { right: 0; }
 
-    /* Animation du Hamburger */
     #menu-toggle:checked + .hamburger span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
     #menu-toggle:checked + .hamburger span:nth-child(2) { opacity: 0; }
     #menu-toggle:checked + .hamburger span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }

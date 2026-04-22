@@ -61,7 +61,6 @@
             <div class="footer-links">
                 <a href="#">Mentions légales</a>
                 <a href="#">Réseaux sociaux</a>
-                <a href="#rendezvous">Contact</a>
             </div>
         </footer>
     </section>
@@ -137,6 +136,14 @@
                 </table>
             </div>
         </div>
+        <footer>
+            <p>&copy; 2026 PlusSanté - Clinique Médicale Agréée.</p>
+            <div class="footer-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#services">Services</a>
+                <a href="#rendezvous">Prendre Rendez-vous</a>
+            </div>
+        </footer>
     </section>
 
     <section id="services" class="page">
@@ -165,6 +172,13 @@
                 </article>
             </div>
         </div>
+        <footer>
+            <p>&copy; 2026 PlusSanté - Clinique Médicale Agréée.</p>
+            <div class="footer-links">
+                <a href="#rendezvous">Prendre Rendez-vous</a>
+                <a>Contact</a>
+            </div>
+        </footer>
     </section>
 
     <section id="rendezvous" class="page">
@@ -214,7 +228,24 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <p>&copy; 2026 PlusSanté - Clinique Médicale Agréée.</p>
+            <div class="footer-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#apropos">À Propos</a>
+                <a href="#services">Services</a>
+            </div>
+        </footer>
     </section>
+
+    <script>
+        // Fermeture automatique du menu mobile après un clic sur un lien
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('menu-toggle').checked = false;
+            });
+        });
+    </script>
 
 </body>
 </html>

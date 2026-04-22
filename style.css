@@ -36,7 +36,6 @@ html, body {
     scroll-behavior: smooth;
 }
 
-/* Scrollbar Personnalisée Premium */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg-color); }
 ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
@@ -71,7 +70,7 @@ header {
     cursor: pointer;
     z-index: 1100;
     padding: 10px;
-    margin-top: -4px;
+    margin-top: 10px;
 }
 
 .hamburger span {
@@ -146,7 +145,6 @@ header {
     border-color: var(--primary-light);
 }
 
-/* TYPOGRAPHY IN CARDS */
 .card h3, .service-box h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 15px; }
 .mission-list { margin-top: 15px; padding-left: 20px; color: var(--text-muted); line-height: 1.8; }
 .values-text, .service-desc { margin-top: 15px; color: var(--text-muted); line-height: 1.7; }
@@ -238,7 +236,11 @@ footer p { color: var(--text-muted); font-weight: 500; font-size: 0.9rem; }
 
 /* --- RESPONSIVE 900px --- */
 @media (max-width: 900px) {
-    .hamburger { display: flex !important; }
+    .hamburger { 
+        display: flex !important; 
+        margin-left: auto; 
+        margin-right: 0; 
+    }
 
     .nav-links {
         position: fixed;
